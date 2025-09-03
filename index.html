@@ -3,65 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeanTylerLee.com</title>
+  <title>Haul Path</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" />
-  <meta name="theme-color" content="#007AFF" />
+  <meta name="theme-color" content="#0b2a52" />
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
-    <div class="site-header-inner">
+    <div class="site-header-inner container">
       <h1 class="site-title">Haul Path</h1>
-      <div class="site-contact">
-        <a href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
-      </div>
+      <nav class="site-actions">
+        <a class="btn btn-ghost" href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero" style="text-align:center; padding:2rem 1rem;">
-    <h2>Download on the App Store</h2>
-    <p>HaulPath 2025 </p>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h2 class="hero-title">Your Smart Trucking Compliance Companion</h2>
+        <p class="hero-subtitle">
+          Instantly check permits, escorts, and legal thresholds by state—right on your device.
+        </p>
+        <div class="hero-cta">
+          <!-- Replace with your real App Store link when ready -->
+          <a class="btn btn-primary" href="legal.html">Legal</a>
+          <a class="btn btn-outline" href="haulpath.html">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="images/haulpath-icon.png" alt="Haul Path App Icon" class="hero-icon" />
+      </div>
+    </div>
   </section>
 
-  <!-- App list -->
+  <!-- App card -->
   <main class="container">
     <div class="app-grid">
-      <!-- Haul Path card -->
       <a class="card app-card" href="haulpath.html">
         <img class="app-icon" src="images/haulpath-icon.png" alt="Haul Path App Icon" />
         <div class="app-meta">
           <div class="app-title">Haul Path</div>
-          <p class="app-desc">Check legal thresholds, permits, escorts & high-poles by state—on device.</p>
+          <p class="app-desc">
+            Enter load dimensions & weights, select route states, and get instant permit + pilot car guidance.
+          </p>
         </div>
       </a>
-      <!-- Add more app cards later by copying the block above -->
-    </div>
-
-    <!-- Buttons section -->
-    <div class="buttons-section" style="margin-top: 2rem; text-align: center;">
-      <button class="reports-btn" onclick="openReports()">Go to Reports</button>
-      <br /><br />
-      <a class="legal-btn" href="legal.html">Legal</a>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    © 2025 SeanTylerLee.com. All rights reserved.
+    <div class="container">
+      © 2025 SeanTylerLee.com. All rights reserved.
+    </div>
   </footer>
-
-  <!-- PIN script -->
-  <script>
-    function openReports() {
-      const pin = prompt("Enter PIN to access reports:");
-      if (pin === "5335") {
-        window.location.href = "reports.html";
-      } else if (pin !== null) {
-        alert("Incorrect PIN. Access denied.");
-      }
-    }
-  </script>
 </body>
 </html>
