@@ -10,7 +10,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #f8fafc;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
@@ -23,11 +24,38 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 10px;
+  z-index: -1;
 }
 
 .header {
   text-align: center;
   margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .logo {
@@ -35,14 +63,25 @@ body {
   height: 100px;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2563eb;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 12px;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tagline {
@@ -55,43 +94,293 @@ h1 {
 .main {
   text-align: center;
   margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 .description {
   font-size: 1rem;
   color: #475569;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   line-height: 1.5;
   padding: 0 8px;
+}
+
+.app-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.phone-mockup {
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  border-radius: 30px;
+  padding: 20px 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #34495e;
+  border-radius: 2px;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.app-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.app-header h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.input-group input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: white;
+  color: #374151;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #dcfce7;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.result-icon {
+  font-size: 1.125rem;
+}
+
+.result span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #166534;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+  padding: 0 8px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.cta-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 24px;
+  line-height: 1.5;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
   padding: 0 8px;
+  margin-bottom: 24px;
+}
+
+.app-badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-badge {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.app-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.badge-icon {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge-title {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.badge-subtitle {
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .legal-button {
   display: inline-block;
-  background: #dc2626;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   color: white;
   padding: 18px 36px;
   border-radius: 16px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.125rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
   width: 100%;
   max-width: 280px;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.legal-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.legal-button:hover::before {
+  left: 100%;
+}
+
+.legal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5);
 }
 
 .legal-button:active {
-  background: #b91c1c;
+  background: linear-gradient(135deg, #ff5252 0%, #d32f2f 100%);
   transform: scale(0.98);
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.6);
 }
 
 .footer {
@@ -124,7 +413,106 @@ h1 {
   
   .description {
     font-size: 0.95rem;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
+  }
+  
+  .app-preview {
+    margin-bottom: 32px;
+  }
+  
+  .phone-mockup {
+    width: 160px;
+    height: 320px;
+    padding: 15px 12px;
+  }
+  
+  .phone-screen {
+    padding: 15px;
+  }
+  
+  .app-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .app-icon {
+    font-size: 1.25rem;
+    margin-right: 8px;
+  }
+  
+  .app-header h4 {
+    font-size: 1rem;
+  }
+  
+  .app-content {
+    gap: 12px;
+  }
+  
+  .input-group label {
+    font-size: 0.8rem;
+  }
+  
+  .input-group input {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .result {
+    padding: 10px;
+  }
+  
+  .result span {
+    font-size: 0.8rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .feature {
+    padding: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .feature h3 {
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+  }
+  
+  .feature p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-section p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .app-badge {
+    padding: 10px 16px;
+  }
+  
+  .badge-icon {
+    font-size: 1.25rem;
+    margin-right: 10px;
+  }
+  
+  .badge-title {
+    font-size: 0.7rem;
+  }
+  
+  .badge-subtitle {
+    font-size: 0.9rem;
   }
   
   .legal-button {
@@ -136,12 +524,13 @@ h1 {
 
 /* Legal page styles */
 .back-link {
-  display: inline-block;
+  display: block;
   color: #2563eb;
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 20px;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .back-link:hover {
@@ -317,6 +706,106 @@ h1 {
   .description {
     font-size: 0.9rem;
     margin-bottom: 20px;
+  }
+  
+  .app-preview {
+    margin-bottom: 20px;
+  }
+  
+  .phone-mockup {
+    width: 120px;
+    height: 240px;
+    padding: 12px 10px;
+  }
+  
+  .phone-screen {
+    padding: 12px;
+  }
+  
+  .app-header {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  
+  .app-icon {
+    font-size: 1rem;
+    margin-right: 6px;
+  }
+  
+  .app-header h4 {
+    font-size: 0.875rem;
+  }
+  
+  .app-content {
+    gap: 10px;
+  }
+  
+  .input-group label {
+    font-size: 0.75rem;
+  }
+  
+  .input-group input {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+  
+  .result {
+    padding: 8px;
+  }
+  
+  .result span {
+    font-size: 0.75rem;
+  }
+  
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .feature {
+    padding: 16px;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .feature h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .feature p {
+    font-size: 0.8rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  
+  .cta-section p {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+  
+  .app-badge {
+    padding: 8px 12px;
+  }
+  
+  .badge-icon {
+    font-size: 1rem;
+    margin-right: 8px;
+  }
+  
+  .badge-title {
+    font-size: 0.65rem;
+  }
+  
+  .badge-subtitle {
+    font-size: 0.8rem;
   }
   
   .legal-button {
