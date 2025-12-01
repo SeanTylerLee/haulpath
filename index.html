@@ -78,65 +78,162 @@
   </script>
 </head>
 <body>
+  <div class="animated-background"></div>
   <div class="container">
     <header class="header">
-      <div class="version-badge">v1</div>
       <div class="logo-container">
-        <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
-        <h1 class="brand-title">HaulPath</h1>
+        <div class="logo-wrapper">
+          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="brand-title">
+          <span class="brand-text">HaulPath</span>
+          <span class="brand-underline"></span>
+        </h1>
       </div>
-      <p class="tagline">Your Smart Trucking Compliance Companion</p>
-      <p class="tagline-subtitle">Pilot Car Requirements & Oversize Load Permits</p>
+      <div class="tagline-container">
+        <p class="tagline">The Professional's Choice for</p>
+        <p class="tagline-highlight">Trucking Compliance</p>
+      </div>
     </header>
 
     <main class="main">
-      <div class="hero-section">
-        <h2 class="hero-title">Stay Legal. Stay Safe. Stay Ahead.</h2>
-        <p class="hero-description">The ultimate professional tool for truckers, built by truckers. Calculate permits, analyze routes, and stay compliant across all 50 states with instant access to pilot car requirements and oversize load regulations.</p>
-        
-        <div class="download-section">
-          <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="app-store-button" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
-          </a>
+      <section class="hero-section">
+        <div class="hero-content">
+          <h2 class="hero-title">
+            <span class="title-line">Stay Legal.</span>
+            <span class="title-line">Stay Safe.</span>
+            <span class="title-line highlight">Stay Ahead.</span>
+          </h2>
+          <p class="hero-description">The ultimate professional tool for truckers, built by truckers. Calculate permits, analyze routes, and stay compliant across all 50 states with instant access to pilot car requirements and oversize load regulations.</p>
+          
+          <div class="download-section">
+            <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="app-store-button" target="_blank" rel="noopener noreferrer">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">States Covered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="1000">0</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="99">0</div>
+            <div class="stat-label">% Accuracy</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="24">0</div>
+            <div class="stat-label">/7 Support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features-section">
+        <div class="section-header">
+          <h2 class="section-title">Everything You Need to Stay Compliant</h2>
+          <p class="section-subtitle">Professional tools built for the modern trucker</p>
         </div>
         
-        <div class="features-preview">
-          <div class="feature-item">
-            <div class="feature-icon-wrapper">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
               <div class="feature-icon">⚡</div>
             </div>
-            <h3>Instant Compliance Check</h3>
-            <p>Enter load dimensions and instantly analyze legal thresholds for every state. Get real-time compliance results in seconds.</p>
+            <h3 class="feature-title">Instant Compliance Check</h3>
+            <p class="feature-description">Enter load dimensions and instantly analyze legal thresholds for every state. Get real-time compliance results in seconds, not hours.</p>
+            <div class="feature-badge">Real-time</div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon-wrapper">
+          
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
               <div class="feature-icon">📊</div>
             </div>
-            <h3>Professional Calculators</h3>
-            <p>Federal Bridge Law, Weight Distribution, Fuel Efficiency, and Load Securement calculators built for professionals.</p>
+            <h3 class="feature-title">Professional Calculators</h3>
+            <p class="feature-description">Federal Bridge Law, Weight Distribution, Fuel Efficiency, and Load Securement calculators built for industry professionals.</p>
+            <div class="feature-badge">Pro Tools</div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon-wrapper">
+          
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
               <div class="feature-icon">🗺️</div>
             </div>
-            <h3>Comprehensive State Data</h3>
-            <p>Legal thresholds for all 50 states with pilot car and high-pole requirements. Always up-to-date and accurate.</p>
+            <h3 class="feature-title">Comprehensive State Data</h3>
+            <p class="feature-description">Legal thresholds for all 50 states with pilot car and high-pole requirements. Always up-to-date and verified for accuracy.</p>
+            <div class="feature-badge">50 States</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
+              <div class="feature-icon">🔒</div>
+            </div>
+            <h3 class="feature-title">Offline Access</h3>
+            <p class="feature-description">Access critical compliance data even without internet connection. Your data is always available when you need it most.</p>
+            <div class="feature-badge">Offline</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
+              <div class="feature-icon">📱</div>
+            </div>
+            <h3 class="feature-title">Mobile First</h3>
+            <p class="feature-description">Designed for the road. Access everything you need from your iPhone, optimized for quick lookups and on-the-go use.</p>
+            <div class="feature-badge">iOS Native</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-container">
+              <div class="feature-icon-bg"></div>
+              <div class="feature-icon">✅</div>
+            </div>
+            <h3 class="feature-title">Always Updated</h3>
+            <p class="feature-description">Our team continuously monitors and updates regulations across all states to ensure you always have the latest information.</p>
+            <div class="feature-badge">Current</div>
           </div>
         </div>
-      </div>
-      
-      <div class="button-container">
-        <a href="legal.html" class="legal-button">
-          <span class="button-icon">📋</span>
-          <span>Legal Information</span>
-        </a>
-      </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-card">
+          <h2 class="cta-title">Ready to Transform Your Compliance Workflow?</h2>
+          <p class="cta-description">Join thousands of professional truckers who trust HaulPath for their compliance needs.</p>
+          <div class="cta-buttons">
+            <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="cta-button primary" target="_blank" rel="noopener noreferrer">
+              <span>Download Now</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="legal.html" class="cta-button secondary">
+              <span>Legal Information</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer-content">
-        <p class="footer-text">© 2025 HaulPath. All rights reserved.</p>
-        <p class="footer-tagline">Built for truckers, by truckers.</p>
+        <div class="footer-brand">
+          <h3 class="footer-title">HaulPath</h3>
+          <p class="footer-tagline">Built for truckers, by truckers.</p>
+        </div>
+        <div class="footer-info">
+          <p class="footer-text">© 2025 HaulPath. All rights reserved.</p>
+          <p class="footer-subtext">Professional trucking compliance made simple.</p>
+        </div>
       </div>
       <div class="seo-content" style="display: none;">
         <h2>Pilot Car Requirements and Oversize Load Permits</h2>
@@ -146,5 +243,57 @@
       </div>
     </footer>
   </div>
+  
+  <script>
+    // Animated counter for stats
+    function animateCounter(element) {
+      const target = parseInt(element.getAttribute('data-target'));
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let current = 0;
+      
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          element.textContent = Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target;
+        }
+      };
+      
+      updateCounter();
+    }
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          
+          // Animate counters when stats section is visible
+          if (entry.target.classList.contains('stat-card')) {
+            const numberElement = entry.target.querySelector('.stat-number');
+            if (numberElement && !numberElement.classList.contains('animated')) {
+              numberElement.classList.add('animated');
+              animateCounter(numberElement);
+            }
+          }
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all elements that should animate on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.stat-card, .feature-card, .cta-card').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
 </body>
 </html>
