@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How it works | HaulPath — Trucking Compliance App</title>
+  <meta name="description" content="Enter load dimensions, select states, and see what’s required for each state you travel through. HaulPath shows permit and pilot car requirements by state in seconds." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://haulpath.com/how-it-works.html" />
+  <meta name="theme-color" content="#f8fafc" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3.4" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="animated-background"></div>
+  <div class="container">
+    <nav class="top-nav" aria-label="Main navigation">
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="main-menu" id="menu-button">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="menu-label">Menu</span>
+      </button>
+      <div class="nav-menu" id="main-menu" hidden>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="legal.html" class="nav-link">Legal</a>
+      </div>
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </nav>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="brand-title">
+          <span class="brand-text">How it works</span>
+          <span class="brand-underline"></span>
+        </h1>
+      </div>
+    </header>
+
+    <main class="page-content" id="main-content">
+      <section class="how-intro">
+        <p class="how-intro-text">HaulPath gives you state-by-state compliance at a glance. Enter your load dimensions, select the states along your route, and instantly see permit requirements, pilot car requirements, and escort rules for each state—so you can plan with confidence and stay legal on every run.</p>
+      </section>
+
+      <section class="how-section">
+        <div class="how-steps">
+          <div class="how-step">
+            <span class="how-step-num">1</span>
+            <h2 class="how-step-title">Enter load dimensions</h2>
+            <p class="how-step-text">Input your load width, height, length, and weight. HaulPath uses your specs to check legal thresholds across all 48 continental states.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-num">2</span>
+            <h2 class="how-step-title">Select your states</h2>
+            <p class="how-step-text">Choose each state you’ll travel through. The app analyzes your route and applies the correct regulations for every jurisdiction.</p>
+          </div>
+          <div class="how-step">
+            <span class="how-step-num">3</span>
+            <h2 class="how-step-title">See what’s required</h2>
+            <p class="how-step-text">View permit needs, pilot car requirements, and escort rules for each state. All data is available offline when you need it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-screenshots" aria-label="App screenshots">
+        <h2 class="screenshots-title">See HaulPath in action</h2>
+        <div class="screenshots-stack">
+          <img src="images/1.png" alt="HaulPath app screenshot 1" class="how-screenshot" />
+          <img src="images/2.png" alt="HaulPath app screenshot 2" class="how-screenshot" />
+          <img src="images/3.png" alt="HaulPath app screenshot 3" class="how-screenshot" />
+          <img src="images/4.png" alt="HaulPath app screenshot 4" class="how-screenshot" />
+        </div>
+      </section>
+
+      <section class="page-cta">
+        <a href="index.html#main-content" class="cta-button primary">
+          <span>Get the app</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-title">HaulPath</h3>
+          <p class="footer-tagline">Built for truckers, by truckers.</p>
+        </div>
+        <div class="footer-info">
+          <p class="footer-text">© 2025 HaulPath. All rights reserved.</p>
+          <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mainMenu = document.getElementById('main-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    function openMenu() {
+      mainMenu.hidden = false;
+      navOverlay.setAttribute('aria-hidden', 'false');
+      menuButton.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    }
+    function closeMenu() {
+      mainMenu.hidden = true;
+      navOverlay.setAttribute('aria-hidden', 'true');
+      menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+    menuButton.addEventListener('click', () => { mainMenu.hidden ? openMenu() : closeMenu(); });
+    navOverlay.addEventListener('click', closeMenu);
+    mainMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+</body>
+</html>

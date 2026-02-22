@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3.1" type="text/css" />
+  <link rel="stylesheet" href="styles.css?v=3.3" type="text/css" />
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -91,8 +91,8 @@
       </button>
       <div class="nav-menu" id="main-menu" hidden>
         <a href="index.html" class="nav-link">Home</a>
-        <a href="#how-it-works" class="nav-link">How it works</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="legal.html" class="nav-link">Legal</a>
       </div>
       <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
@@ -147,14 +147,6 @@
         </div>
       </section>
 
-      <section class="features-section">
-        <div class="section-header">
-          <h2 class="section-title">Everything You Need to Stay Compliant</h2>
-          <p class="section-subtitle">Professional tools built for the modern trucker</p>
-        </div>
-        
-        
-
       <section class="cta-section">
         <div class="cta-card">
           <h2 class="cta-title">Ready to Transform Your Compliance Workflow?</h2>
@@ -165,9 +157,6 @@
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&hl=en_US" class="cta-store-link" target="_blank" rel="noopener noreferrer">
               <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="cta-store-badge cta-play-badge">
-            </a>
-            <a href="legal.html" class="cta-button secondary">
-              <span>Legal Information</span>
             </a>
           </div>
         </div>
@@ -182,7 +171,6 @@
         </div>
         <div class="footer-info">
           <p class="footer-text">© 2025 HaulPath. All rights reserved.</p>
-          <p class="footer-subtext">Professional trucking compliance made simple.</p>
           <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
         </div>
       </div>
@@ -243,6 +231,33 @@
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.stat-card, .feature-card, .cta-card').forEach(el => {
         observer.observe(el);
+      });
+
+      // Menu toggle
+      const menuButton = document.getElementById('menu-button');
+      const mainMenu = document.getElementById('main-menu');
+      const navOverlay = document.getElementById('nav-overlay');
+
+      function openMenu() {
+        mainMenu.hidden = false;
+        navOverlay.setAttribute('aria-hidden', 'false');
+        menuButton.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      }
+      function closeMenu() {
+        mainMenu.hidden = true;
+        navOverlay.setAttribute('aria-hidden', 'true');
+        menuButton.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+
+      menuButton.addEventListener('click', () => {
+        if (mainMenu.hidden) openMenu();
+        else closeMenu();
+      });
+      navOverlay.addEventListener('click', closeMenu);
+      mainMenu.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', closeMenu);
       });
     });
   </script>

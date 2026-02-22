@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing | HaulPath — Trucking Compliance App</title>
+  <meta name="description" content="HaulPath pricing: free to start with one state. Upgrade to Pro for all 48 states, Permit Cost Calculator, and lifetime access." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://haulpath.com/pricing.html" />
+  <meta name="theme-color" content="#f8fafc" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3.1" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="animated-background"></div>
+  <div class="container">
+    <nav class="top-nav" aria-label="Main navigation">
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="main-menu" id="menu-button">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="menu-label">Menu</span>
+      </button>
+      <div class="nav-menu" id="main-menu" hidden>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="legal.html" class="nav-link">Legal</a>
+      </div>
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </nav>
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="brand-title">
+          <span class="brand-text">Pricing</span>
+          <span class="brand-underline"></span>
+        </h1>
+      </div>
+      <div class="tagline-container">
+        <p class="tagline">Simple, transparent</p>
+        <p class="tagline-highlight">pricing for professionals</p>
+      </div>
+    </header>
+
+    <main class="page-content" id="main-content">
+      <section class="pricing-section">
+        <div class="pricing-card">
+          <h2 class="pricing-title">FREE</h2>
+          <p class="pricing-text">HaulPath offers 1 state of your choice for FREE!!</p>
+        </div>
+        <div class="pricing-card">
+          <h2 class="pricing-title">$9.99 one time lifetime subscription!</h2>
+          <p class="pricing-text">To unlock all 48 available states the user must upgrade to PRO in the app for a one time payment of $9.99.</p>
+        </div>
+      </section>
+
+      <section class="page-cta">
+        <a href="index.html" class="cta-button primary">
+          <span>Go to Home</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-title">HaulPath</h3>
+          <p class="footer-tagline">Built for truckers, by truckers.</p>
+        </div>
+        <div class="footer-info">
+          <p class="footer-text">© 2025 HaulPath. All rights reserved.</p>
+          <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mainMenu = document.getElementById('main-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    function openMenu() {
+      mainMenu.hidden = false;
+      navOverlay.setAttribute('aria-hidden', 'false');
+      menuButton.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    }
+    function closeMenu() {
+      mainMenu.hidden = true;
+      navOverlay.setAttribute('aria-hidden', 'true');
+      menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+    menuButton.addEventListener('click', () => { mainMenu.hidden ? openMenu() : closeMenu(); });
+    navOverlay.addEventListener('click', closeMenu);
+    mainMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
+  </script>
+</body>
+</html>

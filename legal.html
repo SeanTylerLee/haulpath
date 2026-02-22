@@ -8,17 +8,31 @@
   <meta name="keywords" content="pilot car requirements legal, oversize load permits legal, trucking compliance legal, escort vehicle regulations, overwidth permits legal, hauling permits legal, trucking app legal, compliance checker legal" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://haulpath.com/legal.html" />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="theme-color" content="#f8fafc" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=3.1" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="animated-background"></div>
   <div class="container">
+    <nav class="top-nav" aria-label="Main navigation">
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="main-menu" id="menu-button">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span class="menu-label">Menu</span>
+      </button>
+      <div class="nav-menu" id="main-menu" hidden>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-it-works.html" class="nav-link">How it works</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="legal.html" class="nav-link">Legal</a>
+      </div>
+      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </nav>
     <header class="header">
       <a href="index.html" class="back-link">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="margin-right: 8px;">
@@ -42,7 +56,7 @@
       </div>
     </header>
 
-    <main class="legal-content">
+    <main class="legal-content" id="main-content">
       <div class="legal-meta">
         <div class="meta-grid">
           <div class="meta-item">
@@ -228,6 +242,24 @@
       document.querySelectorAll('.legal-section, .legal-meta').forEach(el => {
         observer.observe(el);
       });
+      const menuButton = document.getElementById('menu-button');
+      const mainMenu = document.getElementById('main-menu');
+      const navOverlay = document.getElementById('nav-overlay');
+      function openMenu() {
+        mainMenu.hidden = false;
+        navOverlay.setAttribute('aria-hidden', 'false');
+        menuButton.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      }
+      function closeMenu() {
+        mainMenu.hidden = true;
+        navOverlay.setAttribute('aria-hidden', 'true');
+        menuButton.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+      menuButton.addEventListener('click', () => { mainMenu.hidden ? openMenu() : closeMenu(); });
+      navOverlay.addEventListener('click', closeMenu);
+      mainMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
     });
   </script>
 </body>
