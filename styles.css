@@ -414,12 +414,21 @@ main.main {
 .hero-description {
   font-size: 1.125rem;
   color: var(--text-secondary);
-  margin-bottom: 0;
+  margin-bottom: 28px;
   line-height: 1.7;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 400;
+}
+
+.hero-store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
 }
 
 .download-section {
@@ -527,6 +536,7 @@ main.main {
 /* Features Section */
 .features-section {
   margin-bottom: 88px;
+  width: 100%;
 }
 
 .section-header {
@@ -754,43 +764,119 @@ main.main {
 }
 
 /* Pricing */
+.pricing-page {
+  max-width: 920px;
+}
 .pricing-section {
-  margin-bottom: 88px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 24px;
+  width: 100%;
 }
 .pricing-card {
-  max-width: 560px;
+  max-width: none;
   width: 100%;
   margin: 0;
-  padding: 40px 36px;
+  padding: 36px 32px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   text-align: center;
+  position: relative;
+}
+.pricing-card-pro {
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-cta);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.pricing-tier {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 .pricing-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.25rem;
+  font-family: 'Bebas Neue', 'Plus Jakarta Sans', sans-serif;
+  font-size: 3rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--primary);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.pricing-once {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 0 0 12px;
 }
 .pricing-text,
 .pricing-cta {
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.65;
-  margin: 0 0 12px 0;
+  margin: 0 0 20px 0;
 }
 .pricing-cta {
   margin-bottom: 0;
   font-weight: 500;
   color: var(--text-primary);
+}
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pricing-features li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.pricing-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--secondary);
+  font-weight: 700;
+}
+.pricing-note {
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+.pricing-note p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+.pricing-store-cta {
+  margin-top: 8px;
 }
 
 .page-cta {
@@ -1582,4 +1668,159 @@ main.main {
 
 .back-button:active {
   transform: scale(0.98);
+}
+
+/* Homepage screenshots */
+.home-screenshots {
+  margin-bottom: 88px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+.home-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-subtle);
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--bg-card);
+}
+.home-screenshot:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--border-subtle);
+}
+.screenshots-link-wrap {
+  margin: 8px 0 0;
+  text-align: center;
+}
+.text-link {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.text-link:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+/* FAQ */
+.faq-section {
+  margin-bottom: 72px;
+  width: 100%;
+  max-width: 720px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  text-align: left;
+}
+.faq-item.animate-in {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+.faq-question {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+.faq-question::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+.faq-answer {
+  padding: 0 20px 18px;
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.faq-answer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--primary-dark);
+  background: rgba(59, 130, 246, 0.08);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .home-screenshots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 480px;
+  }
+  .pricing-section {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-screenshots {
+    margin-bottom: 60px;
+  }
+  .home-screenshots-grid {
+    gap: 14px;
+  }
+  .home-screenshot {
+    border-radius: 16px;
+  }
+  .faq-section {
+    margin-bottom: 56px;
+  }
+  .hero-store-buttons {
+    flex-direction: column;
+  }
+  .pricing-card {
+    padding: 32px 24px;
+  }
 }

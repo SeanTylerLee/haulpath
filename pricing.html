@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing | HaulPath — Trucking Compliance App</title>
-  <meta name="description" content="HaulPath pricing: free to start with one state. Upgrade to Pro for all 48 states, Permit Cost Calculator, and lifetime access." />
+  <meta name="description" content="HaulPath pricing: free for one state. Unlock Pro for $9.99 one-time—all 48 states, no subscription." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://haulpath.com/pricing.html" />
-  <meta name="theme-color" content="#f8fafc" />
+  <meta name="theme-color" content="#f0f7ff" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3.1" />
+  <link rel="stylesheet" href="styles.css?v=3.5" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -27,7 +27,7 @@
       <div class="nav-menu" id="main-menu" hidden>
         <a href="index.html" class="nav-link">Home</a>
         <a href="how-it-works.html" class="nav-link">How it works</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="pricing.html" class="nav-link" aria-current="page">Pricing</a>
         <a href="legal.html" class="nav-link">Legal</a>
       </div>
       <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
@@ -35,7 +35,7 @@
     <header class="header">
       <div class="logo-container">
         <div class="logo-wrapper">
-          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
+          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" width="120" height="120" />
           <div class="logo-glow"></div>
         </div>
         <h1 class="brand-title">
@@ -45,41 +45,60 @@
       </div>
       <div class="tagline-container">
         <p class="tagline">Simple, transparent</p>
-        <p class="tagline-highlight">pricing for professionals</p>
+        <p class="tagline-highlight">No monthly subscription</p>
       </div>
     </header>
 
-    <main class="page-content" id="main-content">
-      <section class="pricing-section">
+    <main class="page-content pricing-page" id="main-content">
+      <section class="pricing-section" aria-label="Plans">
         <div class="pricing-card">
-          <h2 class="pricing-title">FREE</h2>
-          <p class="pricing-text">HaulPath offers 1 state of your choice for FREE!!</p>
+          <p class="pricing-tier">Free</p>
+          <h2 class="pricing-title">$0</h2>
+          <p class="pricing-text">Try HaulPath with one state of your choice—no credit card required.</p>
+          <ul class="pricing-features">
+            <li>1 state of your choice</li>
+            <li>Load dimension checks</li>
+            <li>Permit &amp; pilot car lookup</li>
+            <li>Offline access</li>
+          </ul>
         </div>
-        <div class="pricing-card">
-          <h2 class="pricing-title">$9.99 one time lifetime subscription!</h2>
-          <p class="pricing-text">To unlock all 48 available states the user must upgrade to PRO in the app for a one time payment of $9.99.</p>
+        <div class="pricing-card pricing-card-pro">
+          <p class="pricing-badge">Most popular</p>
+          <p class="pricing-tier">Pro</p>
+          <h2 class="pricing-title">$9.99</h2>
+          <p class="pricing-once">One-time purchase · lifetime access</p>
+          <p class="pricing-text">Unlock every continental state and plan multi-state hauls with confidence.</p>
+          <ul class="pricing-features">
+            <li>All 48 continental states</li>
+            <li>Multi-state route checks</li>
+            <li>Permit &amp; pilot car requirements</li>
+            <li>Escort rules by jurisdiction</li>
+            <li>Offline access</li>
+            <li>No subscription fees</li>
+          </ul>
         </div>
       </section>
 
-      <section class="page-cta">
-        <a href="index.html" class="cta-button primary">
-          <span>Go to Home</span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+      <section class="pricing-note">
+        <p>Upgrade to Pro inside the iOS or Android app. Pricing may vary slightly by store and region.</p>
+      </section>
+
+      <section class="page-cta pricing-store-cta">
+        <div class="cta-buttons">
+          <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="cta-store-link" target="_blank" rel="noopener noreferrer">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="cta-store-badge cta-app-badge" width="176" height="52">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&hl=en_US" class="cta-store-link" target="_blank" rel="noopener noreferrer">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="cta-store-badge cta-play-badge" width="260" height="76">
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer-content">
-        <div class="footer-brand">
-          <h3 class="footer-title">HaulPath</h3>
-          <p class="footer-tagline">Built for truckers, by truckers.</p>
-        </div>
         <div class="footer-info">
           <p class="footer-text">© 2026 STL Apps LLC. All rights reserved.</p>
-          <p class="footer-subtext">HaulPath is owned solely by STL Apps LLC.</p>
           <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
         </div>
         <a class="built-by" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
