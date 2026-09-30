@@ -3,131 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pricing | HaulPath — Trucking Compliance App</title>
-  <meta name="description" content="HaulPath pricing: free for one state. Unlock Pro for $9.99 one-time—all 48 states, no subscription." />
+  <title>Pricing | HaulPath</title>
+  <meta name="description" content="HaulPath pricing: free for one state. Unlock Pro for $9.99 one-time—all 48 continental states, no subscription." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://haulpath.com/pricing.html" />
-  <meta name="theme-color" content="#f0f7ff" />
+  <meta name="theme-color" content="#f5f8fc" />
+  <meta property="og:title" content="Pricing | HaulPath" />
+  <meta property="og:description" content="Free for one state. Pro is $9.99 once for all 48 continental states." />
+  <meta property="og:image" content="https://haulpath.com/images/og.png" />
+  <meta property="og:url" content="https://haulpath.com/pricing.html" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3.5" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4.1" />
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="animated-background"></div>
-  <div class="container">
-    <nav class="top-nav" aria-label="Main navigation">
-      <button type="button" class="menu-button" aria-expanded="false" aria-controls="main-menu" id="menu-button">
-        <span class="menu-icon" aria-hidden="true"></span>
-        <span class="menu-label">Menu</span>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <img src="images/haulpath-icon.png" alt="" width="40" height="40" />
+        <span>HaulPath</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="pricing.html" aria-current="page">Pricing</a>
+        <a href="legal.html">Legal</a>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="#plans">Get Pro — $9.99</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
-      <div class="nav-menu" id="main-menu" hidden>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="how-it-works.html" class="nav-link">How it works</a>
-        <a href="pricing.html" class="nav-link" aria-current="page">Pricing</a>
-        <a href="legal.html" class="nav-link">Legal</a>
-      </div>
-      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    <nav class="nav-drawer" id="nav-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="pricing.html" aria-current="page">Pricing</a>
+      <a href="legal.html">Legal</a>
+      <a class="btn btn-primary" href="#plans">Get Pro — $9.99</a>
     </nav>
-    <header class="header">
-      <div class="logo-container">
-        <div class="logo-wrapper">
-          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" width="120" height="120" />
-          <div class="logo-glow"></div>
-        </div>
-        <h1 class="brand-title">
-          <span class="brand-text">Pricing</span>
-          <span class="brand-underline"></span>
-        </h1>
-      </div>
-      <div class="tagline-container">
-        <p class="tagline">Simple, transparent</p>
-        <p class="tagline-highlight">No monthly subscription</p>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Pricing</p>
+        <h1>One free state. Pro is $9.99 once.</h1>
+        <p>No monthly subscription. Upgrade inside the iOS or Android app when you need the full lower 48.</p>
       </div>
     </header>
 
-    <main class="page-content pricing-page" id="main-content">
-      <section class="pricing-section" aria-label="Plans">
-        <div class="pricing-card">
-          <p class="pricing-tier">Free</p>
-          <h2 class="pricing-title">$0</h2>
-          <p class="pricing-text">Try HaulPath with one state of your choice—no credit card required.</p>
-          <ul class="pricing-features">
-            <li>1 state of your choice</li>
-            <li>Load dimension checks</li>
-            <li>Permit &amp; pilot car lookup</li>
-            <li>Offline access</li>
-          </ul>
+    <section class="section" id="plans" aria-label="Plans">
+      <div class="wrap">
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="price-kicker">Free</p>
+            <h2>Free</h2>
+            <p class="price-amount">$0</p>
+            <p class="once">Try HaulPath with one state of your choice—no credit card required.</p>
+            <ul>
+              <li>1 state of your choice</li>
+              <li>Load dimension checks</li>
+              <li>Permit and pilot car lookup</li>
+              <li>Travel hours and curfews</li>
+              <li>Offline access</li>
+            </ul>
+          </article>
+          <article class="price-card is-pro">
+            <p class="price-kicker">Most used</p>
+            <h2>Pro</h2>
+            <p class="price-amount">$9.99</p>
+            <p class="once">One-time purchase · lifetime access</p>
+            <ul>
+              <li>All 48 continental states</li>
+              <li>Multi-state route checks</li>
+              <li>Permit and pilot car requirements</li>
+              <li>Escort rules by jurisdiction</li>
+              <li>Permit cost calculator</li>
+              <li>Offline access</li>
+              <li>No subscription fees</li>
+            </ul>
+          </article>
         </div>
-        <div class="pricing-card pricing-card-pro">
-          <p class="pricing-badge">Most popular</p>
-          <p class="pricing-tier">Pro</p>
-          <h2 class="pricing-title">$9.99</h2>
-          <p class="pricing-once">One-time purchase · lifetime access</p>
-          <p class="pricing-text">Unlock every continental state and plan multi-state hauls with confidence.</p>
-          <ul class="pricing-features">
-            <li>All 48 continental states</li>
-            <li>Multi-state route checks</li>
-            <li>Permit &amp; pilot car requirements</li>
-            <li>Escort rules by jurisdiction</li>
-            <li>Offline access</li>
-            <li>No subscription fees</li>
-          </ul>
-        </div>
-      </section>
+        <p class="note">Upgrade to Pro inside the iOS or Android app. Pricing may vary slightly by store and region.</p>
+      </div>
+    </section>
 
-      <section class="pricing-note">
-        <p>Upgrade to Pro inside the iOS or Android app. Pricing may vary slightly by store and region.</p>
-      </section>
-
-      <section class="page-cta pricing-store-cta">
-        <div class="cta-buttons">
-          <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="cta-store-link" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="cta-store-badge cta-app-badge" width="176" height="52">
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&hl=en_US" class="cta-store-link" target="_blank" rel="noopener noreferrer">
-            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="cta-store-badge cta-play-badge" width="260" height="76">
-          </a>
+    <section class="cta-band">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2>Get HaulPath</h2>
+          <p>Download free, pick your first state, and unlock Pro when the route crosses more lines.</p>
+          <div class="stores center">
+            <a href="https://apps.apple.com/us/app/haul-path/id6752206931" target="_blank" rel="noopener noreferrer">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="176" height="52" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&amp;hl=en_US" target="_blank" rel="noopener noreferrer">
+              <img class="play-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="206" height="80" />
+            </a>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-info">
-          <p class="footer-text">© 2026 STL Apps LLC. All rights reserved.</p>
-          <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>HaulPath</strong>
+          <p>Oversize permit and pilot car requirements for the 48 continental states. Owned solely by STL Apps LLC.</p>
         </div>
-        <a class="built-by" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="legal.html">Legal &amp; Privacy</a>
+          <a href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
+        </nav>
+        <a class="stl" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
           <span>Owned solely by</span>
           <img src="images/stlapps-logo.jpg" alt="STL Apps LLC" width="160" height="36" />
         </a>
       </div>
-    </footer>
-  </div>
-
-  <script>
-    const menuButton = document.getElementById('menu-button');
-    const mainMenu = document.getElementById('main-menu');
-    const navOverlay = document.getElementById('nav-overlay');
-    function openMenu() {
-      mainMenu.hidden = false;
-      navOverlay.setAttribute('aria-hidden', 'false');
-      menuButton.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('menu-open');
-    }
-    function closeMenu() {
-      mainMenu.hidden = true;
-      navOverlay.setAttribute('aria-hidden', 'true');
-      menuButton.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-    }
-    menuButton.addEventListener('click', () => { mainMenu.hidden ? openMenu() : closeMenu(); });
-    navOverlay.addEventListener('click', closeMenu);
-    mainMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
-  </script>
+      <div class="copy">
+        <small>© 2026 STL Apps LLC. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js?v=4.0"></script>
 </body>
 </html>

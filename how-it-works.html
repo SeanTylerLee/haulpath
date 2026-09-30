@@ -3,128 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How it works | HaulPath — Trucking Compliance App</title>
-  <meta name="description" content="Enter load dimensions, select states, and see what’s required for each state you travel through. HaulPath shows permit and pilot car requirements by state in seconds." />
+  <title>How it works | HaulPath</title>
+  <meta name="description" content="Enter load dimensions, select states, and see permit, pilot car, escort, and travel-hour requirements for each state on your route." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://haulpath.com/how-it-works.html" />
-  <meta name="theme-color" content="#f8fafc" />
+  <meta name="theme-color" content="#f5f8fc" />
+  <meta property="og:title" content="How it works | HaulPath" />
+  <meta property="og:description" content="Enter load dimensions, select states, and see what each jurisdiction requires." />
+  <meta property="og:image" content="https://haulpath.com/images/og.png" />
+  <meta property="og:url" content="https://haulpath.com/how-it-works.html" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3.5" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=4.1" />
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="animated-background"></div>
-  <div class="container">
-    <nav class="top-nav" aria-label="Main navigation">
-      <button type="button" class="menu-button" aria-expanded="false" aria-controls="main-menu" id="menu-button">
-        <span class="menu-icon" aria-hidden="true"></span>
-        <span class="menu-label">Menu</span>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <img src="images/haulpath-icon.png" alt="" width="40" height="40" />
+        <span>HaulPath</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="how-it-works.html" aria-current="page">How it works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="legal.html">Legal</a>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="pricing.html">Get Pro — $9.99</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+        <span></span><span></span><span></span>
       </button>
-      <div class="nav-menu" id="main-menu" hidden>
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="how-it-works.html" class="nav-link" aria-current="page">How it works</a>
-        <a href="pricing.html" class="nav-link">Pricing</a>
-        <a href="legal.html" class="nav-link">Legal</a>
-      </div>
-      <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+    <nav class="nav-drawer" id="nav-drawer" hidden>
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html" aria-current="page">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="legal.html">Legal</a>
+      <a class="btn btn-primary" href="pricing.html">Get Pro — $9.99</a>
     </nav>
-    <header class="header">
-      <div class="logo-container">
-        <div class="logo-wrapper">
-          <img src="images/haulpath-icon.png" alt="HaulPath" class="logo" />
-          <div class="logo-glow"></div>
-        </div>
-        <h1 class="brand-title">
-          <span class="brand-text">How it works</span>
-          <span class="brand-underline"></span>
-        </h1>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Product walkthrough</p>
+        <h1>How HaulPath checks a haul</h1>
+        <p>State-by-state compliance at a glance. You enter the load, pick the route states, and read what each jurisdiction requires—permits, escorts, and travel hours included.</p>
       </div>
     </header>
 
-    <main class="page-content" id="main-content">
-      <section class="how-intro">
-        <p class="how-intro-text">HaulPath gives you state-by-state compliance at a glance. Enter your load dimensions, select the states along your route, and instantly see permit requirements, pilot car requirements, and escort rules for each state—so you can plan with confidence and stay legal on every run.</p>
-      </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="steps">
+          <article class="step">
+            <span class="step-num">1</span>
+            <h2>Enter load dimensions</h2>
+            <p>Input width, height, length, and weight. HaulPath uses those specs against legal thresholds across all 48 continental states.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">2</span>
+            <h2>Select your states</h2>
+            <p>Choose each state you will travel through. The app applies that state’s rules instead of a single nationwide average.</p>
+          </article>
+          <article class="step">
+            <span class="step-num">3</span>
+            <h2>See what is required</h2>
+            <p>View permit needs, pilot cars, high-pole cars, police escorts, and travel-time rules. Data stays available offline.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <section class="how-section">
-        <div class="how-steps">
-          <div class="how-step">
-            <span class="how-step-num">1</span>
-            <h2 class="how-step-title">Enter load dimensions</h2>
-            <p class="how-step-text">Input your load width, height, length, and weight. HaulPath uses your specs to check legal thresholds across all 48 continental states.</p>
+    <section class="section" aria-label="App screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>From dimensions to a go / no-go</h2>
+          <p>The same flow you use in the yard, on iOS and Android.</p>
+        </div>
+        <div class="shots">
+          <figure>
+            <img src="images/1.png" alt="HaulPath: enter load width, height, length, and weight" width="280" height="560" loading="lazy" />
+            <figcaption>Enter the load</figcaption>
+          </figure>
+          <figure>
+            <img src="images/2.png" alt="HaulPath: legal transport result for selected states" width="280" height="560" loading="lazy" />
+            <figcaption>Route analysis</figcaption>
+          </figure>
+          <figure>
+            <img src="images/3.png" alt="HaulPath: permit and pilot car requirements by state" width="280" height="560" loading="lazy" />
+            <figcaption>Requirements by state</figcaption>
+          </figure>
+          <figure>
+            <img src="images/4.png" alt="HaulPath: state legal thresholds and travel time" width="280" height="560" loading="lazy" />
+            <figcaption>Thresholds and hours</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2>Run the check on your next load</h2>
+          <p>Free for one state. Pro is $9.99 once for all 48 continental states.</p>
+          <div class="stores center">
+            <a href="https://apps.apple.com/us/app/haul-path/id6752206931" target="_blank" rel="noopener noreferrer">
+              <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="176" height="52" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&amp;hl=en_US" target="_blank" rel="noopener noreferrer">
+              <img class="play-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="206" height="80" />
+            </a>
           </div>
-          <div class="how-step">
-            <span class="how-step-num">2</span>
-            <h2 class="how-step-title">Select your states</h2>
-            <p class="how-step-text">Choose each state you’ll travel through. The app analyzes your route and applies the correct regulations for every jurisdiction.</p>
-          </div>
-          <div class="how-step">
-            <span class="how-step-num">3</span>
-            <h2 class="how-step-title">See what’s required</h2>
-            <p class="how-step-text">View permit needs, pilot car requirements, and escort rules for each state. All data is available offline when you need it.</p>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="how-screenshots" aria-label="App screenshots">
-        <h2 class="screenshots-title">See HaulPath in action</h2>
-        <div class="screenshots-stack">
-          <img src="images/1.png" alt="HaulPath: enter load width, height, length, and weight" class="how-screenshot" width="280" height="560" loading="lazy" />
-          <img src="images/2.png" alt="HaulPath: select states along your route" class="how-screenshot" width="280" height="560" loading="lazy" />
-          <img src="images/3.png" alt="HaulPath: view permit and pilot car requirements by state" class="how-screenshot" width="280" height="560" loading="lazy" />
-          <img src="images/4.png" alt="HaulPath: compliance results summary for your haul" class="how-screenshot" width="280" height="560" loading="lazy" />
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>HaulPath</strong>
+          <p>Oversize permit and pilot car requirements for the 48 continental states. Owned solely by STL Apps LLC.</p>
         </div>
-      </section>
-
-      <section class="page-cta pricing-store-cta">
-        <div class="cta-buttons">
-          <a href="https://apps.apple.com/us/app/haul-path/id6752206931" class="cta-store-link" target="_blank" rel="noopener noreferrer">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="cta-store-badge cta-app-badge" width="176" height="52">
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.haulpath.app&hl=en_US" class="cta-store-link" target="_blank" rel="noopener noreferrer">
-            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="cta-store-badge cta-play-badge" width="260" height="76">
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-info">
-          <p class="footer-text">© 2026 STL Apps LLC. All rights reserved.</p>
-          <a href="legal.html" class="footer-legal-link">Legal &amp; Privacy</a>
-        </div>
-        <a class="built-by" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="legal.html">Legal &amp; Privacy</a>
+          <a href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
+        </nav>
+        <a class="stl" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
           <span>Owned solely by</span>
           <img src="images/stlapps-logo.jpg" alt="STL Apps LLC" width="160" height="36" />
         </a>
       </div>
-    </footer>
-  </div>
-
-  <script>
-    const menuButton = document.getElementById('menu-button');
-    const mainMenu = document.getElementById('main-menu');
-    const navOverlay = document.getElementById('nav-overlay');
-    function openMenu() {
-      mainMenu.hidden = false;
-      navOverlay.setAttribute('aria-hidden', 'false');
-      menuButton.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('menu-open');
-    }
-    function closeMenu() {
-      mainMenu.hidden = true;
-      navOverlay.setAttribute('aria-hidden', 'true');
-      menuButton.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-    }
-    menuButton.addEventListener('click', () => { mainMenu.hidden ? openMenu() : closeMenu(); });
-    navOverlay.addEventListener('click', closeMenu);
-    mainMenu.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
-  </script>
+      <div class="copy">
+        <small>© 2026 STL Apps LLC. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js?v=4.0"></script>
 </body>
 </html>
