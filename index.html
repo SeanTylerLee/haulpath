@@ -7,13 +7,15 @@
   <meta name="description" content="Enter load dimensions, pick the states on your route, and see permit, pilot car, escort, and travel-hour rules for all 48 continental states. Offline-ready. $9.99 one-time Pro." />
   <meta name="author" content="STL Apps LLC" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#f5f8fc" />
+  <meta name="theme-color" content="#f4f7fb" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://haulpath.com/" />
   <meta property="og:title" content="HaulPath | Oversize Permits &amp; Pilot Car Requirements" />
   <meta property="og:description" content="State-by-state oversize compliance: permits, pilot cars, escorts, and travel hours. Built for professional haulers." />
   <meta property="og:image" content="https://haulpath.com/images/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="HaulPath" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -25,10 +27,11 @@
   <link rel="canonical" href="https://haulpath.com/" />
   <link rel="icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="images/haulpath-icon.png" />
+  <link rel="preload" as="image" href="images/phone-permit.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4.1" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=5.1" />
 
   <script type="application/ld+json">
   {
@@ -110,14 +113,14 @@
   <header class="site-header">
     <div class="wrap header-bar">
       <a class="brand" href="index.html">
-        <img src="images/haulpath-icon.png" alt="" width="40" height="40" />
+        <img src="images/mark.png" alt="" width="38" height="38" />
         <span>HaulPath</span>
       </a>
       <nav class="nav-desktop" aria-label="Primary">
         <a href="index.html" aria-current="page">Home</a>
         <a href="how-it-works.html">How it works</a>
         <a href="pricing.html">Pricing</a>
-        <a href="legal.html">Legal</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <a class="btn btn-primary btn-sm header-cta" href="pricing.html">Get Pro — $9.99</a>
       <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
@@ -129,7 +132,7 @@
       <a href="index.html" aria-current="page">Home</a>
       <a href="how-it-works.html">How it works</a>
       <a href="pricing.html">Pricing</a>
-      <a href="legal.html">Legal</a>
+      <a href="contact.html">Contact</a>
       <a class="btn btn-primary" href="pricing.html">Get Pro — $9.99</a>
     </nav>
   </header>
@@ -139,7 +142,7 @@
       <div class="wrap hero-grid">
         <div>
           <p class="eyebrow">Oversize load compliance</p>
-          <h1>Permit and pilot car rules for every state on your route</h1>
+          <h1>Permit and pilot car rules for <span>every state</span> on your route</h1>
           <p class="lead">Enter width, height, length, and weight. Select the states you will travel. HaulPath shows permits, pilot cars, escorts, high-pole cars, and travel hours before you roll.</p>
           <div class="hero-actions" id="download">
             <div class="stores">
@@ -151,9 +154,19 @@
               </a>
             </div>
           </div>
+          <div class="chips" aria-label="Product highlights">
+            <span class="chip"><i class="ok"></i> Works offline</span>
+            <span class="chip"><i></i> One-time $9.99 Pro</span>
+            <span class="chip"><i></i> One free state to start</span>
+          </div>
         </div>
-        <div class="hero-shot">
-          <img src="images/3.png" alt="HaulPath showing permit required, pilot car required, and high pole car required for an oversize load" width="360" height="780" />
+        <div class="hero-stage">
+          <div class="phone phone-back">
+            <img src="images/phone-dimensions.png" alt="" width="230" height="482" />
+          </div>
+          <div class="phone phone-front">
+            <img src="images/phone-permit.png" alt="HaulPath showing permit required, pilot car required, and high pole car required for an oversize load" width="270" height="566" />
+          </div>
         </div>
       </div>
     </section>
@@ -181,7 +194,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt">
       <div class="wrap">
         <div class="section-head">
           <h2>Three steps. Clear requirements.</h2>
@@ -204,6 +217,14 @@
             <p>Permits, pilot cars, high-pole cars, police escorts, travel hours, and curfews—listed per jurisdiction.</p>
           </article>
         </div>
+        <div class="flags" aria-label="What HaulPath checks">
+          <span class="flag">Permits</span>
+          <span class="flag">Pilot cars</span>
+          <span class="flag">High-pole cars</span>
+          <span class="flag">Police escorts</span>
+          <span class="flag">Travel hours</span>
+          <span class="flag">Curfews</span>
+        </div>
       </div>
     </section>
 
@@ -215,32 +236,44 @@
         </div>
         <div class="features">
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7" stroke-linecap="round"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h10M4 17h7" stroke-linecap="round"/></svg>
+            </div>
             <h3>Legal thresholds</h3>
             <p>Interstate and state limits for width, height, length, axle weights, and gross vehicle weight.</p>
           </article>
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M8 9h8M8 13h6" stroke-linecap="round"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M8 9h8M8 13h6" stroke-linecap="round"/></svg>
+            </div>
             <h3>Permit flags</h3>
             <p>See which states need an oversize or overweight permit for the dimensions you entered.</p>
           </article>
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M5 16H3v-5l3-4h8l3 4h2v5h-2"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/><path d="M5 16H3v-5l3-4h8l3 4h2v5h-2"/></svg>
+            </div>
             <h3>Pilot cars &amp; escorts</h3>
             <p>Pilot car, high-pole, and police escort thresholds called out for each selected state.</p>
           </article>
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" stroke-linecap="round"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" stroke-linecap="round"/></svg>
+            </div>
             <h3>Travel hours</h3>
             <p>Allowed days, daylight rules, and curfew windows so you can plan when the load can move.</p>
           </article>
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 4h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M14 4v5h5"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M14 4v5h5"/></svg>
+            </div>
             <h3>State documents</h3>
             <p>Open official state PDFs in the app when you need the source page, not only the summary.</p>
           </article>
           <article class="feature">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12a7 7 0 0 1 14 0" stroke-linecap="round"/><path d="M12 12v7M8 19h8" stroke-linecap="round"/></svg>
+            <div class="icon-well" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12a7 7 0 0 1 14 0" stroke-linecap="round"/><path d="M12 12v7M8 19h8" stroke-linecap="round"/></svg>
+            </div>
             <h3>Works offline</h3>
             <p>Regulations stay on the device after download—usable in dead zones and at the scale house.</p>
           </article>
@@ -248,7 +281,7 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="shots-heading">
+    <section class="section section-alt" aria-labelledby="shots-heading">
       <div class="wrap">
         <div class="section-head">
           <h2 id="shots-heading">See the check before you dispatch</h2>
@@ -256,19 +289,27 @@
         </div>
         <div class="shots">
           <figure>
-            <img src="images/1.png" alt="HaulPath dimension entry for width, height, length, and weight" width="280" height="560" />
+            <div class="phone">
+              <img src="images/phone-dimensions.png" alt="HaulPath dimension entry for width, height, length, and weight" width="240" height="503" loading="lazy" />
+            </div>
             <figcaption>Enter load dimensions</figcaption>
           </figure>
           <figure>
-            <img src="images/2.png" alt="HaulPath route analysis showing legal transport in selected states" width="280" height="560" />
+            <div class="phone">
+              <img src="images/phone-legal.png" alt="HaulPath route analysis showing legal transport in selected states" width="240" height="503" loading="lazy" />
+            </div>
             <figcaption>Instant route analysis</figcaption>
           </figure>
           <figure>
-            <img src="images/3.png" alt="HaulPath flagging permit, pilot car, and high pole requirements" width="280" height="560" />
+            <div class="phone">
+              <img src="images/phone-permit.png" alt="HaulPath flagging permit, pilot car, and high pole requirements" width="240" height="503" loading="lazy" />
+            </div>
             <figcaption>Permit and escort flags</figcaption>
           </figure>
           <figure>
-            <img src="images/4.png" alt="HaulPath state details with travel time and legal thresholds" width="280" height="560" />
+            <div class="phone">
+              <img src="images/phone-state.png" alt="HaulPath state details with travel time and legal thresholds" width="240" height="503" loading="lazy" />
+            </div>
             <figcaption>State-by-state detail</figcaption>
           </figure>
         </div>
@@ -311,7 +352,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt">
       <div class="wrap">
         <div class="section-head">
           <h2>Common questions</h2>
@@ -367,8 +408,8 @@
         <nav class="footer-links" aria-label="Footer">
           <a href="how-it-works.html">How it works</a>
           <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
           <a href="legal.html">Legal &amp; Privacy</a>
-          <a href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
         </nav>
         <a class="stl" href="https://seantylerlee.com" target="_blank" rel="noopener noreferrer">
           <span>Owned solely by</span>
@@ -377,9 +418,10 @@
       </div>
       <div class="copy">
         <small>© 2026 STL Apps LLC. All rights reserved.</small>
+        <a href="mailto:haulpath@icloud.com">haulpath@icloud.com</a>
       </div>
     </div>
   </footer>
-  <script src="site.js?v=4.0"></script>
+  <script src="site.js?v=5.0"></script>
 </body>
 </html>
