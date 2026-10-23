@@ -762,6 +762,11 @@ body.menu-open .nav-overlay {
   align-items: stretch;
 }
 
+.pricing-grid.is-single {
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
 .price-card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -1224,6 +1229,10 @@ body.menu-open .nav-overlay {
   .pricing-grid,
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid.is-single {
+    grid-template-columns: 1fr;
   }
 
   .shots {
